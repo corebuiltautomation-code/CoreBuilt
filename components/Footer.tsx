@@ -24,8 +24,7 @@ export default function Footer() {
                 <line x1="30" y1="20" x2="30" y2="24" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round"/>
                 <line x1="20" y1="30" x2="24" y2="30" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
-              <span className="text-white">Core</span>
-              <span className="text-[#3B82F6]">Built</span>
+              <span className="text-white">Core</span><span className="text-[#3B82F6]">Built</span>
             </a>
           </div>
 
@@ -42,11 +41,11 @@ export default function Footer() {
           </div>
 
           <a
-            href="mailto:contact@corebuilt.co.uk"
+            href="mailto:corebuilt.automation@gmail.com"
             className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors"
           >
             <Mail size={14} />
-            contact@corebuilt.co.uk
+            corebuilt.automation@gmail.com
           </a>
         </div>
 

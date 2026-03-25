@@ -40,8 +40,7 @@ export default function Navbar() {
             <line x1="30" y1="20" x2="30" y2="24" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round"/>
             <line x1="20" y1="30" x2="24" y2="30" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
-          <span className="text-white">Core</span>
-          <span className="text-[#3B82F6]">Built</span>
+          <span className="text-white">Core</span><span className="text-[#3B82F6]">Built</span>
         </a>
 
         {/* Desktop */}
