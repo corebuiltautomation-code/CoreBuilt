@@ -16,7 +16,7 @@ const steps = [
     icon: Wrench,
     title: "We build your automation",
     description:
-      "In 48 hours, we set up a custom system that captures, responds to, and follows up with every lead — automatically.",
+      "In 48 hours, we set up a custom system that captures, responds to, and follows up with every lead automatically.",
   },
   {
     num: "03",
@@ -41,14 +41,19 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <section id="how-it-works" className="px-6 py-24 md:py-32 bg-white">
-      <div ref={ref} className="mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <span className={`inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] mb-4 ${visible ? "animate-fade-in-up" : "opacity-0"}`}>
+    <section id="how-it-works" className="px-6 py-28 md:py-36 bg-[#0A0F1C] relative overflow-hidden">
+      {/* Background accents */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#3B82F6]/5 rounded-full blur-[150px]" />
+
+      <div ref={ref} className="relative mx-auto max-w-6xl">
+        <div className="text-center mb-20">
+          <span className={`inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#3B82F6] mb-4 ${visible ? "animate-pop-in" : "opacity-0"}`}>
             How It Works
           </span>
-          <h2 className={`font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-[#0f172a] ${visible ? "animate-fade-in-up animate-delay-100" : "opacity-0"}`}>
-            How it works
+          <h2 className={`font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-white ${visible ? "animate-reveal-up animate-delay-100" : "opacity-0"}`}>
+            Three simple steps to
+            <br className="hidden sm:block" />
+            <span className="bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] bg-clip-text text-transparent">never miss a lead again</span>
           </h2>
         </div>
 
@@ -56,29 +61,32 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={step.num}
-              className={`relative text-center ${visible ? "animate-fade-in-up" : "opacity-0"}`}
-              style={{ animationDelay: `${(i + 1) * 150}ms` }}
+              className={`relative text-center ${visible ? "animate-reveal-up" : "opacity-0"}`}
+              style={{ animationDelay: `${(i + 2) * 150}ms` }}
             >
               {/* Connector line */}
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[calc(50%+48px)] w-[calc(100%-96px)] h-px bg-gradient-to-r from-[#3B82F6]/30 to-[#e2e8f0]" />
+                <div className="hidden md:block absolute top-16 left-[calc(50%+56px)] w-[calc(100%-112px)] h-px">
+                  <div className="h-full bg-gradient-to-r from-[#3B82F6]/40 to-[#3B82F6]/10" />
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#3B82F6]/30" />
+                </div>
               )}
 
               <div className="relative inline-flex flex-col items-center">
                 {/* Number */}
-                <span className="font-[family-name:var(--font-display)] text-6xl font-bold text-[#3B82F6]/10 mb-2">
+                <span className="font-[family-name:var(--font-display)] text-7xl font-bold text-white/[0.03] mb-0 select-none">
                   {step.num}
                 </span>
                 {/* Icon */}
-                <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#3B82F6]/10 text-[#3B82F6]">
-                  <step.icon size={26} />
+                <div className="mb-8 -mt-4 inline-flex items-center justify-center w-16 h-16 rounded-2xl glass-card text-[#3B82F6] hover:bg-[#3B82F6]/10 transition-all duration-500">
+                  <step.icon size={28} />
                 </div>
               </div>
 
-              <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-[#0f172a] mb-3">
+              <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-white mb-4">
                 {step.title}
               </h3>
-              <p className="text-[#64748b] leading-relaxed max-w-xs mx-auto">
+              <p className="text-white/40 leading-relaxed max-w-xs mx-auto">
                 {step.description}
               </p>
             </div>

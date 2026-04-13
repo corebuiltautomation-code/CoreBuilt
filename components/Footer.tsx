@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -8,12 +8,14 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0F1C] px-6 py-12">
+    <footer className="bg-[#0A0F1C] px-6 py-16 relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="text-center md:text-left">
-            <a href="#" className="inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight">
-              <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+            <a href="#" className="inline-flex items-center gap-2.5 font-[family-name:var(--font-display)] text-xl font-bold tracking-tight group">
+              <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" className="group-hover:scale-110 transition-transform duration-300">
                 <rect width="44" height="44" rx="10" fill="#3B82F6"/>
                 <rect x="8" y="8" width="12" height="12" rx="3" fill="#FFFFFF" opacity="0.9"/>
                 <rect x="24" y="8" width="12" height="12" rx="3" fill="#FFFFFF" opacity="0.5"/>
@@ -33,7 +35,7 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/40 hover:text-white transition-colors"
+                className="text-sm text-white/35 hover:text-white transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -42,14 +44,15 @@ export default function Footer() {
 
           <a
             href="mailto:alex@corebuilt.services"
-            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors"
+            className="group inline-flex items-center gap-2 text-sm text-white/35 hover:text-white transition-colors duration-300"
           >
             <Mail size={14} />
             alex@corebuilt.services
+            <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-white/10 text-center text-xs text-white/30">
+        <div className="mt-12 pt-8 border-t border-white/5 text-center text-xs text-white/20">
           &copy; 2026 CoreBuilt. All rights reserved.
         </div>
       </div>
