@@ -57,8 +57,13 @@ export default function Hero() {
           </a>
         </div>
 
+        {/* Guarantee */}
+        <p className="animate-fade-in-up animate-delay-400 mt-5 text-sm text-white/40">
+          If it doesn&apos;t work in 2 weeks, you don&apos;t pay anything.
+        </p>
+
         {/* Stat badge */}
-        <div className="animate-fade-in-up animate-delay-400 mt-16 inline-flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-5 py-3">
+        <div className="animate-fade-in-up animate-delay-400 mt-10 inline-flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-5 py-3">
           <Clock size={18} className="text-[#3B82F6]" />
           <span className="text-sm text-white/60">
             Average response time: <span className="font-semibold text-white">&lt; 10 seconds</span>

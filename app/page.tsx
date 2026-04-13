@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import Stats from "@/components/Stats";
 import Testimonial from "@/components/Testimonial";
+import Guarantee from "@/components/Guarantee";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <HowItWorks />
         <Stats />
         <Testimonial />
+        <Guarantee />
         <Contact />
       </main>
       <Footer />

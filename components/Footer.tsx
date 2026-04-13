@@ -41,11 +41,11 @@ export default function Footer() {
           </div>
 
           <a
-            href="mailto:corebuilt.automation@gmail.com"
+            href="mailto:alex@corebuilt.services"
             className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white transition-colors"
           >
             <Mail size={14} />
-            corebuilt.automation@gmail.com
+            alex@corebuilt.services
           </a>
         </div>
 
